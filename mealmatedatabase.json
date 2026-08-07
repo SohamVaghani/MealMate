@@ -1,0 +1,274 @@
+[
+{"type":"header","version":"5.2.1","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"foodexpress"},
+{"type":"table","name":"addresses","database":"foodexpress","data":
+[
+{"id":"1","user_id":"4","label":"Home","address_line":"B-802,Sky Icon,Nani Ved,Katargam,Surat","city":"SURAT","state":"Gujarat","pincode":"395004","latitude":"23.0293","longitude":"72.5521","is_default":"1","created_at":"2026-02-19 07:44:36"},
+{"id":"2","user_id":"7","label":"Home","address_line":"B-802,Sky Icon,Nani Ved,Katargam,Surat","city":"SURAT","state":"Gujarat","pincode":"395004","latitude":"23.0292","longitude":"72.5513","is_default":"0","created_at":"2026-02-20 00:08:35"}
+]
+}
+,{"type":"table","name":"coupons","database":"foodexpress","data":
+[
+{"id":"1","code":"WELCOME50","description":"50% off on your first order! Max Rs.150 discount.","discount_type":"percentage","discount_value":"50","min_order_amount":"199","max_discount":"150","usage_limit":null,"per_user_limit":"1","is_first_order_only":"1","is_active":"1","valid_from":"2026-02-18 18:15:20","valid_until":"2027-02-18 18:15:20","created_at":"2026-02-18 18:15:20"},
+{"id":"2","code":"AMDAVAD100","description":"Flat Rs.100 off on orders above Rs.499 - Ahmedabad Special","discount_type":"fixed","discount_value":"100","min_order_amount":"499","max_discount":null,"usage_limit":null,"per_user_limit":"2","is_first_order_only":"0","is_active":"1","valid_from":"2026-02-18 18:15:20","valid_until":"2027-02-18 18:15:20","created_at":"2026-02-18 18:15:20"},
+{"id":"3","code":"THALI20","description":"20% off up to Rs.80 on all Thali orders","discount_type":"percentage","discount_value":"20","min_order_amount":"299","max_discount":"80","usage_limit":null,"per_user_limit":"3","is_first_order_only":"0","is_active":"1","valid_from":"2026-02-18 18:15:20","valid_until":"2027-02-18 18:15:20","created_at":"2026-02-18 18:15:20"},
+{"id":"4","code":"FREEDEL","description":"Free delivery on orders above Rs.399","discount_type":"fixed","discount_value":"40","min_order_amount":"399","max_discount":null,"usage_limit":null,"per_user_limit":"5","is_first_order_only":"0","is_active":"1","valid_from":"2026-02-18 18:15:20","valid_until":"2027-02-18 18:15:20","created_at":"2026-02-18 18:15:20"},
+{"id":"5","code":"WEEKEND25","description":"25% off up to Rs.120 - Weekend Special","discount_type":"percentage","discount_value":"25","min_order_amount":"349","max_discount":"120","usage_limit":null,"per_user_limit":"2","is_first_order_only":"0","is_active":"1","valid_from":"2026-02-18 18:15:20","valid_until":"2027-02-18 18:15:20","created_at":"2026-02-18 18:15:20"}
+]
+}
+,{"type":"table","name":"coupon_usages","database":"foodexpress","data":
+[
+{"id":"1","coupon_id":"4","user_id":"4","order_id":"15","discount_amount":"40","used_at":"2026-02-20 04:07:35"},
+{"id":"2","coupon_id":"4","user_id":"4","order_id":"16","discount_amount":"40","used_at":"2026-02-20 06:50:47"},
+{"id":"3","coupon_id":"4","user_id":"4","order_id":"17","discount_amount":"40","used_at":"2026-07-08 13:20:46"}
+]
+}
+,{"type":"table","name":"delivery_agents","database":"foodexpress","data":
+[
+{"id":"1","user_id":"2","is_available":"1","current_order_id":"15","created_at":"2026-02-18 18:15:20"},
+{"id":"2","user_id":"3","is_available":"0","current_order_id":"2","created_at":"2026-02-18 18:15:20"}
+]
+}
+,{"type":"table","name":"food_items","database":"foodexpress","data":
+[
+{"id":"1","restaurant_id":"1","name":"Pav Bhaji","description":"Buttery mashed vegetables with soft pav buns","image":"samosa.jpeg","price":"80","category":"Street Food","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"2","restaurant_id":"1","name":"Sev Usal","description":"Spicy sprouted moth beans curry topped with sev","image":"samosa.webp","price":"60","category":"Street Food","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"3","restaurant_id":"1","name":"Dabeli","description":"Kutchi dabeli with pomegranate, peanuts and chutneys","image":"samosa.jpeg","price":"30","category":"Street Food","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"4","restaurant_id":"1","name":"Masala Dosa","description":"Crispy dosa with spiced potato filling","image":"dosa.avif","price":"70","category":"Street Food","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"5","restaurant_id":"1","name":"Khaman Sandwich","description":"Grilled sandwich stuffed with soft khaman","image":"khaman.jpg","price":"50","category":"Street Food","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"6","restaurant_id":"1","name":"Kulfi Falooda","description":"Creamy malai kulfi with falooda sev and rose syrup","image":"shake.avif","price":"80","category":"Desserts","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"7","restaurant_id":"1","name":"Ragda Pattice","description":"Crispy aloo tikki with spiced ragda and chutneys","image":"samosa.jpeg","price":"60","category":"Street Food","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"8","restaurant_id":"2","name":"Lucknowi Biryani","description":"Slow-cooked aromatic biryani with tender meat flavors","image":"Biryani.avif","price":"220","category":"Main Course","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"9","restaurant_id":"2","name":"Chicken Biryani","description":"Fragrant rice layered with spiced chicken","image":"Biryani.avif","price":"200","category":"Main Course","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"10","restaurant_id":"2","name":"Mutton Seekh Kebab","description":"Grilled minced mutton kebabs with mint chutney","image":"thali9.jpeg","price":"260","category":"Starters","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"11","restaurant_id":"2","name":"Paneer Butter Masala","description":"Cottage cheese in rich tomato-butter gravy","image":"thali8.jpeg","price":"180","category":"Main Course","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"12","restaurant_id":"2","name":"Butter Naan","description":"Soft tandoor-baked naan with butter","image":"roti.jpeg","price":"40","category":"Breads","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"13","restaurant_id":"2","name":"Rumali Roti","description":"Paper-thin soft roti","image":"roti.jpeg","price":"30","category":"Breads","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"14","restaurant_id":"2","name":"Gulab Jamun","description":"Deep-fried milk dumplings soaked in sugar syrup","image":"dessert.jpeg","price":"60","category":"Desserts","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"15","restaurant_id":"3","name":"Unlimited Gujarati Thali","description":"Full Gujarati thali with dal, kadhi, shaak, roti, rice, papad, sweet","image":"thali.jpg","price":"350","category":"Thali","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"16","restaurant_id":"3","name":"Kathiyawadi Thali","description":"Spicy Kathiyawadi style unlimited thali","image":"thali1.jpg","price":"400","category":"Thali","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"17","restaurant_id":"3","name":"Dal Bati Churma","description":"Rajasthani style baked wheat balls with dal and sweet churma","image":"dal khichadi.jpg","price":"250","category":"Main Course","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"18","restaurant_id":"3","name":"Gujarati Kadhi","description":"Sweet and tangy yogurt-based curry with pakoras","image":"thali7.jpeg","price":"80","category":"Main Course","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"19","restaurant_id":"3","name":"Bajra Rotla","description":"Traditional millet flatbread with ghee","image":"roti.jpeg","price":"30","category":"Breads","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"20","restaurant_id":"4","name":"Heritage Gujarati Thali","description":"Premium 32-item thali with seasonal specialties and live counters","image":"thali.jpg","price":"850","category":"Thali","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"21","restaurant_id":"4","name":"Kesar Mango Ras","description":"Fresh Alphonso mango pulp served chilled","image":"shake.avif","price":"150","category":"Beverages","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"22","restaurant_id":"4","name":"Mohanthal","description":"Traditional besan fudge with saffron and nuts","image":"dessert.jpeg","price":"120","category":"Desserts","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"23","restaurant_id":"4","name":"Undhiyu","description":"Signature winter mixed vegetable dish cooked in earthen pot","image":"undhiyu.jpg","price":"220","category":"Main Course","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"24","restaurant_id":"4","name":"Surti Ponk Bhel","description":"Seasonal flat rice flakes with green jowar and spices","image":"samosa.jpeg","price":"180","category":"Starters","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"25","restaurant_id":"5","name":"Vishalla Thali","description":"Village-style unlimited thali served on leaf plates with buttermilk","image":"thali.jpg","price":"600","category":"Thali","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"26","restaurant_id":"5","name":"Bajra Rotlo with Ringan no Olo","description":"Millet bread with smoky roasted eggplant","image":"roti.jpeg","price":"120","category":"Main Course","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"27","restaurant_id":"5","name":"Mag ni Dal","description":"Traditional moong dal tadka with ghee","image":"dal khichadi.jpg","price":"100","category":"Main Course","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"28","restaurant_id":"5","name":"Masala Chaas","description":"Spiced buttermilk with cumin and curry leaves","image":"chaas.jpeg","price":"40","category":"Beverages","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"29","restaurant_id":"5","name":"Shrikhand","description":"Sweet strained yogurt with saffron and cardamom","image":"shrikhand.jpeg","price":"80","category":"Desserts","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"30","restaurant_id":"6","name":"Paneer Tikka","description":"Chargrilled marinated cottage cheese with peppers","image":"thali8.jpeg","price":"220","category":"Starters","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"31","restaurant_id":"6","name":"Veg Manchurian","description":"Crispy veggie balls in spicy Manchurian sauce","image":"chinese.avif","price":"180","category":"Chinese","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"32","restaurant_id":"6","name":"Dal Makhani","description":"Slow-cooked black dal with cream and butter","image":"dal khichadi.jpg","price":"200","category":"Main Course","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"33","restaurant_id":"6","name":"Hakka Noodles","description":"Stir-fried noodles with vegetables and soy sauce","image":"chinese.avif","price":"160","category":"Chinese","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"34","restaurant_id":"6","name":"Tandoori Roti","description":"Whole wheat bread baked in tandoor","image":"roti.jpeg","price":"25","category":"Breads","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"35","restaurant_id":"6","name":"Lassi","description":"Thick creamy sweet yogurt drink","image":"shake.avif","price":"70","category":"Beverages","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"36","restaurant_id":"7","name":"Khaman","description":"Soft steamed gram flour cake with mustard tempering","image":"khaman.jpg","price":"60","category":"Farsan","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"37","restaurant_id":"7","name":"Khandvi","description":"Thin rolled gram flour sheets with coconut tempering","image":"khandvi.jpeg","price":"70","category":"Farsan","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"38","restaurant_id":"7","name":"Dhokla","description":"Fluffy steamed rice-chana dal cake with green chutney","image":"dhokla.jpeg","price":"50","category":"Farsan","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"39","restaurant_id":"7","name":"Fafda Jalebi","description":"Crispy gram flour strips with sweet jalebi - Sunday special","image":"fafda.webp","price":"60","category":"Farsan","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"40","restaurant_id":"7","name":"Thepla","description":"Spiced fenugreek flatbread - perfect travel snack","image":"thepla.jpeg","price":"40","category":"Farsan","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"41","restaurant_id":"7","name":"Handvo","description":"Baked savory cake with mixed lentils and vegetables","image":"dhokla.jpeg","price":"70","category":"Farsan","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"42","restaurant_id":"7","name":"Patra","description":"Colocasia leaf rolls steamed with gram flour paste","image":"patra.jpg","price":"60","category":"Farsan","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"43","restaurant_id":"8","name":"Masala Dosa","description":"Crispy rice crepe with spiced potato filling and chutneys","image":"dosa.avif","price":"130","category":"Dosa","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"44","restaurant_id":"8","name":"Mysore Masala Dosa","description":"Dosa with red chutney spread and potato masala","image":"dosa.avif","price":"150","category":"Dosa","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"45","restaurant_id":"8","name":"Idli Sambhar","description":"Steamed rice cakes with lentil soup and coconut chutney","image":"idli.avif","price":"100","category":"Main Course","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"46","restaurant_id":"8","name":"Medu Vada","description":"Crispy fried urad dal donuts with sambhar","image":"vada.avif","price":"90","category":"Starters","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"47","restaurant_id":"8","name":"Rava Dosa","description":"Crispy semolina crepe with onion and green chillies","image":"dosa.avif","price":"140","category":"Dosa","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"48","restaurant_id":"8","name":"Uttapam","description":"Thick rice pancake topped with onion, tomato and chillies","image":"idli1.avif","price":"120","category":"Main Course","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"49","restaurant_id":"8","name":"Filter Coffee","description":"Traditional South Indian filter coffee","image":"coffe.avif","price":"50","category":"Beverages","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"50","restaurant_id":"9","name":"Havmor Burger","description":"Signature Ahmedabad-style veggie burger with special sauce","image":"bking2.jpg","price":"150","category":"Burgers","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"51","restaurant_id":"9","name":"Grilled Sandwich","description":"Triple-layer grilled cheese sandwich with veggies","image":"sub.jpg","price":"120","category":"Sandwiches","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"52","restaurant_id":"9","name":"Veg Pizza","description":"Loaded veggie pizza with cheese and herbs","image":"pizza.avif","price":"200","category":"Pizza","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"53","restaurant_id":"9","name":"Cassata Ice Cream","description":"Havmor iconic layered tutti-frutti ice cream","image":"cake.avif","price":"80","category":"Ice Cream","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"54","restaurant_id":"9","name":"Mango Dolly","description":"Classic mango-flavored ice cream bar","image":"shake.avif","price":"40","category":"Ice Cream","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"55","restaurant_id":"9","name":"Hot Chocolate Fudge","description":"Vanilla ice cream with warm chocolate fudge and nuts","image":"dessert.jpeg","price":"150","category":"Ice Cream","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"56","restaurant_id":"10","name":"Rajwadu Royal Thali","description":"Grand Rajasthani-Gujarati thali with 35+ items and live counters","image":"thali.jpg","price":"700","category":"Thali","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"57","restaurant_id":"10","name":"Dal Baati Churma","description":"Baked wheat balls with panchmel dal and sweet churma","image":"dal khichadi.jpg","price":"280","category":"Main Course","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"58","restaurant_id":"10","name":"Gatte ki Sabzi","description":"Gram flour dumplings in spiced yogurt gravy","image":"thali7.jpeg","price":"180","category":"Main Course","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"59","restaurant_id":"10","name":"Ker Sangri","description":"Rajasthani wild berries and beans dry vegetable","image":"thali8.jpeg","price":"200","category":"Main Course","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"60","restaurant_id":"10","name":"Ghevar","description":"Honeycomb-shaped Rajasthani sweet with rabri","image":"dessert.jpeg","price":"100","category":"Desserts","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"61","restaurant_id":"11","name":"Gordhan Special Thali","description":"Premium unlimited thali with 40+ items including farsan and sweets","image":"thali.jpg","price":"550","category":"Thali","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"62","restaurant_id":"11","name":"Paneer Bhurji","description":"Scrambled paneer with onion, tomato and spices","image":"thali8.jpeg","price":"180","category":"Main Course","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"63","restaurant_id":"11","name":"Sev Tameta nu Shaak","description":"Tangy tomato curry topped with crispy sev","image":"sev tameta.jpeg","price":"120","category":"Main Course","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"64","restaurant_id":"11","name":"Rotla","description":"Thick millet flatbread with white butter","image":"roti.jpeg","price":"30","category":"Breads","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"65","restaurant_id":"11","name":"Basundi","description":"Reduced sweetened milk with nuts and saffron","image":"dessert.jpeg","price":"90","category":"Desserts","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"66","restaurant_id":"12","name":"Veg Buffet Lunch","description":"Unlimited multi-cuisine buffet with city views","image":"thali.jpg","price":"800","category":"Buffet","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"67","restaurant_id":"12","name":"Paneer Lababdar","description":"Paneer in rich onion-tomato cashew gravy","image":"thali8.jpeg","price":"320","category":"Main Course","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"68","restaurant_id":"12","name":"Mushroom Galouti","description":"Melt-in-mouth mushroom kebabs","image":"thali9.jpeg","price":"280","category":"Starters","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"69","restaurant_id":"12","name":"Brownie with Ice Cream","description":"Warm chocolate brownie with vanilla ice cream","image":"cake.avif","price":"220","category":"Desserts","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"70","restaurant_id":"12","name":"Fresh Lime Soda","description":"Refreshing sweet or salted fresh lime soda","image":"chaas.jpeg","price":"80","category":"Beverages","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"71","restaurant_id":"13","name":"Veg BBQ Unlimited","description":"Unlimited starters on live grill, main course, and desserts","image":"sizzler.jpeg","price":"999","category":"BBQ","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"72","restaurant_id":"13","name":"Paneer Tikka Grill","description":"Marinated paneer grilled at your table","image":"thali8.jpeg","price":"250","category":"Starters","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"73","restaurant_id":"13","name":"Cajun Spice Potato","description":"Spiced potato wedges grilled to perfection","image":"samosa.jpeg","price":"180","category":"Starters","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"74","restaurant_id":"13","name":"Veg Kebab Platter","description":"Assorted vegetable kebabs with mint chutney","image":"thali9.jpeg","price":"350","category":"Starters","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"75","restaurant_id":"13","name":"Kulfi","description":"Traditional Indian ice cream with pistachios","image":"shake.avif","price":"120","category":"Desserts","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"76","restaurant_id":"14","name":"Tomatoes Special Pizza","description":"House special loaded pizza with extra cheese","image":"pizza.avif","price":"250","category":"Pizza","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"77","restaurant_id":"14","name":"Penne Arrabiata","description":"Penne in spicy tomato sauce with herbs","image":"noodles.jpeg","price":"220","category":"Pasta","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"78","restaurant_id":"14","name":"Veg Spring Roll","description":"Crispy rolls stuffed with mixed vegetables","image":"samosa.jpeg","price":"150","category":"Starters","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"79","restaurant_id":"14","name":"Fried Rice","description":"Wok-tossed rice with vegetables and soy sauce","image":"chinese.avif","price":"180","category":"Chinese","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"80","restaurant_id":"14","name":"Cold Coffee","description":"Chilled blended coffee with ice cream","image":"coffe.avif","price":"120","category":"Beverages","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"81","restaurant_id":"15","name":"Avocado Toast","description":"Sourdough toast with smashed avocado","image":"sub1.jpg","price":"220","category":"Breakfast","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"82","restaurant_id":"15","name":"Classic Pancakes","description":"Fluffy pancakes with maple syrup and berries","image":"cake.avif","price":"200","category":"Breakfast","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"83","restaurant_id":"15","name":"Caesar Salad","description":"Romaine lettuce with parmesan and croutons","image":"salad.avif","price":"250","category":"Salads","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"84","restaurant_id":"15","name":"Pasta Alfredo","description":"Creamy white sauce pasta with mushrooms","image":"noodles.jpeg","price":"280","category":"Pasta","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"85","restaurant_id":"15","name":"Nutella Shake","description":"Thick shake blended with Nutella and ice cream","image":"shake.avif","price":"180","category":"Beverages","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"86","restaurant_id":"15","name":"Cheesecake","description":"New York style baked cheesecake with berry compote","image":"cake1.jpg","price":"220","category":"Desserts","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"87","restaurant_id":"16","name":"Chilli Paneer","description":"Crispy paneer tossed in spicy chilli sauce","image":"chinese.avif","price":"200","category":"Chinese","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"88","restaurant_id":"16","name":"Veg Manchow Soup","description":"Spicy vegetable soup with crispy noodles on top","image":"chinese.avif","price":"120","category":"Soups","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"89","restaurant_id":"16","name":"Schezwan Fried Rice","description":"Fiery Schezwan-style wok rice with vegetables","image":"chinese.avif","price":"180","category":"Rice","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"90","restaurant_id":"16","name":"Hakka Noodles","description":"Stir-fried noodles with crunchy vegetables","image":"chinese.avif","price":"170","category":"Noodles","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"91","restaurant_id":"16","name":"Manchurian Gravy","description":"Veg balls in tangy Manchurian gravy","image":"chinese.avif","price":"190","category":"Chinese","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"92","restaurant_id":"16","name":"Honey Chilli Potato","description":"Crispy fried potatoes glazed with honey and chilli","image":"chinese.avif","price":"180","category":"Starters","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"93","restaurant_id":"17","name":"Unlimited Thali","description":"Simple and authentic Gujarati thali with homestyle taste","image":"thali.jpg","price":"300","category":"Thali","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"94","restaurant_id":"17","name":"Chole Bhature","description":"Spiced chickpeas with fluffy fried bread","image":"chole.avif","price":"120","category":"Main Course","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"95","restaurant_id":"17","name":"Samosa","description":"Crispy pastry with spiced potato-pea filling","image":"samosa.jpeg","price":"20","category":"Starters","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"96","restaurant_id":"17","name":"Kachori","description":"Deep-fried pastry with spiced moong dal filling","image":"samosa.webp","price":"25","category":"Starters","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"97","restaurant_id":"17","name":"Chaas","description":"Refreshing spiced buttermilk","image":"chaas.jpeg","price":"30","category":"Beverages","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"98","restaurant_id":"18","name":"Grand Buffet","description":"Lavish multi-cuisine unlimited buffet with live stations","image":"thali.jpg","price":"900","category":"Buffet","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"99","restaurant_id":"18","name":"Veg Sizzler","description":"Mixed vegetables on sizzling hot plate with rice and gravy","image":"sizzler.jpeg","price":"350","category":"Main Course","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"100","restaurant_id":"18","name":"Mushroom Risotto","description":"Creamy Italian rice with wild mushrooms and parmesan","image":"rice.jpeg","price":"320","category":"Italian","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"101","restaurant_id":"18","name":"Tiramisu","description":"Classic Italian coffee-flavored layered dessert","image":"cake2.jpg","price":"250","category":"Desserts","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"102","restaurant_id":"18","name":"Virgin Mojito","description":"Refreshing mint and lime mocktail","image":"chaas.jpeg","price":"150","category":"Beverages","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"103","restaurant_id":"19","name":"Bun Maska","description":"Soft Irani bun with thick butter layer","image":"roti.jpeg","price":"30","category":"Snacks","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"104","restaurant_id":"19","name":"Irani Chai","description":"Sweet milky tea served in a glass - old city style","image":"coffe.avif","price":"20","category":"Beverages","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"105","restaurant_id":"19","name":"Keema Pav","description":"Spiced minced meat with buttered pav","image":"samosa.jpeg","price":"80","category":"Snacks","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"106","restaurant_id":"19","name":"Mawa Cake","description":"Dense and moist milk-solid cake - Irani bakery classic","image":"cake3.jpg","price":"25","category":"Bakery","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"107","restaurant_id":"19","name":"Chicken Samosa","description":"Crispy samosa with spiced chicken filling","image":"samosa.webp","price":"30","category":"Snacks","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"108","restaurant_id":"19","name":"Egg Bhurji Pav","description":"Spiced scrambled eggs with buttered pav","image":"egg.avif","price":"60","category":"Snacks","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"109","restaurant_id":"20","name":"Kathiyawadi Thali","description":"Spicy Kathiyawadi unlimited thali with regional specialties","image":"thali3.jpg","price":"350","category":"Thali","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"110","restaurant_id":"20","name":"Sev Tameta","description":"Spicy tomato curry topped with gathiya sev","image":"sev tameta.jpeg","price":"100","category":"Main Course","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"111","restaurant_id":"20","name":"Ringan no Olo","description":"Smoky fire-roasted eggplant mash with garlic","image":"bhindi.jpeg","price":"90","category":"Main Course","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"112","restaurant_id":"20","name":"Rotla with Ghee","description":"Thick bajra roti served with pure ghee","image":"roti.jpeg","price":"30","category":"Breads","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"113","restaurant_id":"20","name":"Aloo Gobi","description":"Spiced potato and cauliflower dry vegetable","image":"aloo gobi.jpeg","price":"120","category":"Main Course","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"114","restaurant_id":"20","name":"Raab","description":"Traditional warm millet porridge drink","image":"chaas.jpeg","price":"50","category":"Beverages","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"115","restaurant_id":"21","name":"Butter Chicken","description":"Tender chicken in creamy tomato butter sauce","image":"thali9.jpeg","price":"280","category":"Main Course","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"116","restaurant_id":"21","name":"Malai Kofta","description":"Paneer-potato balls in rich cashew cream gravy","image":"thali7.jpeg","price":"240","category":"Main Course","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"117","restaurant_id":"21","name":"Garlic Naan","description":"Soft naan topped with garlic and butter","image":"roti.jpeg","price":"50","category":"Breads","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"118","restaurant_id":"21","name":"Tandoori Platter","description":"Assorted tandoor items - paneer, mushroom, broccoli","image":"thali9.jpeg","price":"350","category":"Starters","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"119","restaurant_id":"21","name":"Dum Biryani","description":"Slow-cooked aromatic rice with vegetables and saffron","image":"Biryani.avif","price":"250","category":"Main Course","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"120","restaurant_id":"21","name":"Rasmalai","description":"Soft paneer balls in sweetened saffron milk","image":"dessert.jpeg","price":"80","category":"Desserts","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"121","restaurant_id":"22","name":"Veg Club Sandwich","description":"Triple-decker sandwich with veggies, cheese and chutney","image":"sub2.jpg","price":"130","category":"Sandwiches","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"122","restaurant_id":"22","name":"Masala Omelette","description":"Spiced egg omelette with onion, tomato, chilli","image":"egg.avif","price":"60","category":"Eggs","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"123","restaurant_id":"22","name":"Bread Butter Jam","description":"Fresh bread with butter and mixed fruit jam","image":"roti.jpeg","price":"40","category":"Bakery","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"124","restaurant_id":"22","name":"Cutting Chai","description":"Half cup strong masala tea - Ahmedabad style","image":"coffe.avif","price":"15","category":"Beverages","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"125","restaurant_id":"22","name":"Khari Biscuit","description":"Flaky puff pastry biscuit - perfect with chai","image":"fafda.webp","price":"30","category":"Bakery","is_available":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"126","restaurant_id":"22","name":"Fresh Fruit Juice","description":"Seasonal fresh fruit juice without sugar","image":"shake.avif","price":"80","category":"Beverages","is_available":"1","created_at":"2026-02-18 18:15:20"}
+]
+}
+,{"type":"table","name":"notifications","database":"foodexpress","data":
+[
+
+]
+}
+,{"type":"table","name":"orders","database":"foodexpress","data":
+[
+{"id":"1","user_id":"4","restaurant_id":"11","address_id":"1","delivery_agent_id":"1","status":"confirmed","subtotal":"550","discount_amount":"0","coupon_code":null,"total_amount":"577.5","payment_method":"razorpay","payment_status":"completed","created_at":"2026-02-19 07:45:24","updated_at":"2026-02-19 07:45:56"},
+{"id":"2","user_id":"4","restaurant_id":"1","address_id":"1","delivery_agent_id":"2","status":"confirmed","subtotal":"130","discount_amount":"0","coupon_code":null,"total_amount":"176.5","payment_method":"razorpay","payment_status":"completed","created_at":"2026-02-19 09:19:32","updated_at":"2026-02-19 09:21:18"},
+{"id":"3","user_id":"7","restaurant_id":"1","address_id":"2","delivery_agent_id":"1","status":"pending","subtotal":"80","discount_amount":"0","coupon_code":null,"total_amount":"124","payment_method":"razorpay","payment_status":"pending","created_at":"2026-02-20 00:08:53","updated_at":"2026-02-20 00:08:53"},
+{"id":"4","user_id":"7","restaurant_id":"1","address_id":"2","delivery_agent_id":null,"status":"pending","subtotal":"180","discount_amount":"0","coupon_code":null,"total_amount":"229","payment_method":"razorpay","payment_status":"pending","created_at":"2026-02-20 00:14:56","updated_at":"2026-02-20 00:14:56"},
+{"id":"5","user_id":"7","restaurant_id":"1","address_id":"2","delivery_agent_id":null,"status":"pending","subtotal":"240","discount_amount":"0","coupon_code":null,"total_amount":"292","payment_method":"razorpay","payment_status":"pending","created_at":"2026-02-20 00:17:59","updated_at":"2026-02-20 00:17:59"},
+{"id":"6","user_id":"7","restaurant_id":"1","address_id":"2","delivery_agent_id":null,"status":"pending","subtotal":"180","discount_amount":"0","coupon_code":null,"total_amount":"229","payment_method":"razorpay","payment_status":"pending","created_at":"2026-02-20 00:23:45","updated_at":"2026-02-20 00:23:45"},
+{"id":"7","user_id":"7","restaurant_id":"1","address_id":"2","delivery_agent_id":null,"status":"confirmed","subtotal":"120","discount_amount":"0","coupon_code":null,"total_amount":"166","payment_method":"razorpay","payment_status":"completed","created_at":"2026-02-20 00:30:45","updated_at":"2026-02-20 00:30:46"},
+{"id":"8","user_id":"7","restaurant_id":"1","address_id":"2","delivery_agent_id":null,"status":"pending","subtotal":"50","discount_amount":"0","coupon_code":null,"total_amount":"92.5","payment_method":"cod","payment_status":"pending","created_at":"2026-02-20 00:32:58","updated_at":"2026-02-20 00:32:58"},
+{"id":"9","user_id":"7","restaurant_id":"1","address_id":"2","delivery_agent_id":null,"status":"confirmed","subtotal":"80","discount_amount":"0","coupon_code":null,"total_amount":"124","payment_method":"razorpay","payment_status":"completed","created_at":"2026-02-20 00:38:29","updated_at":"2026-02-20 00:38:31"},
+{"id":"10","user_id":"7","restaurant_id":"1","address_id":"2","delivery_agent_id":null,"status":"confirmed","subtotal":"140","discount_amount":"0","coupon_code":null,"total_amount":"187","payment_method":"razorpay","payment_status":"completed","created_at":"2026-02-20 00:40:58","updated_at":"2026-02-20 00:40:59"},
+{"id":"11","user_id":"4","restaurant_id":"1","address_id":"1","delivery_agent_id":null,"status":"confirmed","subtotal":"80","discount_amount":"0","coupon_code":null,"total_amount":"124","payment_method":"razorpay","payment_status":"completed","created_at":"2026-02-20 00:50:52","updated_at":"2026-02-20 00:51:26"},
+{"id":"12","user_id":"4","restaurant_id":"1","address_id":"1","delivery_agent_id":null,"status":"confirmed","subtotal":"120","discount_amount":"0","coupon_code":null,"total_amount":"166","payment_method":"razorpay","payment_status":"completed","created_at":"2026-02-20 01:05:58","updated_at":"2026-02-20 01:06:19"},
+{"id":"13","user_id":"4","restaurant_id":"1","address_id":"1","delivery_agent_id":"1","status":"delivered","subtotal":"160","discount_amount":"0","coupon_code":null,"total_amount":"208","payment_method":"razorpay","payment_status":"completed","created_at":"2026-02-20 02:18:47","updated_at":"2026-02-20 02:24:03"},
+{"id":"14","user_id":"4","restaurant_id":"1","address_id":"1","delivery_agent_id":null,"status":"packed","subtotal":"160","discount_amount":"0","coupon_code":null,"total_amount":"208","payment_method":"razorpay","payment_status":"completed","created_at":"2026-02-20 04:04:03","updated_at":"2026-02-20 06:08:33"},
+{"id":"15","user_id":"4","restaurant_id":"10","address_id":"1","delivery_agent_id":"1","status":"delivered","subtotal":"700","discount_amount":"40","coupon_code":"FREEDEL","total_amount":"693","payment_method":"razorpay","payment_status":"completed","created_at":"2026-02-20 04:07:35","updated_at":"2026-02-20 06:05:35"},
+{"id":"16","user_id":"4","restaurant_id":"1","address_id":"1","delivery_agent_id":null,"status":"confirmed","subtotal":"450","discount_amount":"40","coupon_code":"FREEDEL","total_amount":"470.5","payment_method":"razorpay","payment_status":"completed","created_at":"2026-02-20 06:50:47","updated_at":"2026-02-20 06:52:13"},
+{"id":"17","user_id":"4","restaurant_id":"11","address_id":"1","delivery_agent_id":null,"status":"pending","subtotal":"420","discount_amount":"40","coupon_code":"FREEDEL","total_amount":"439","payment_method":"razorpay","payment_status":"pending","created_at":"2026-07-08 13:20:46","updated_at":"2026-07-08 13:20:46"},
+{"id":"18","user_id":"7","restaurant_id":"1","address_id":"2","delivery_agent_id":null,"status":"pending","subtotal":"50","discount_amount":"0","coupon_code":null,"total_amount":"92.5","payment_method":"razorpay","payment_status":"pending","created_at":"2026-08-04 19:24:36","updated_at":"2026-08-04 19:24:36"},
+{"id":"19","user_id":"7","restaurant_id":"1","address_id":"2","delivery_agent_id":null,"status":"confirmed","subtotal":"80","discount_amount":"0","coupon_code":null,"total_amount":"124","payment_method":"razorpay","payment_status":"completed","created_at":"2026-08-04 20:50:21","updated_at":"2026-08-04 20:50:41"}
+]
+}
+,{"type":"table","name":"order_history","database":"foodexpress","data":
+[
+
+]
+}
+,{"type":"table","name":"order_items","database":"foodexpress","data":
+[
+{"id":"1","order_id":"1","food_item_id":"61","quantity":"1","price":"550"},
+{"id":"2","order_id":"2","food_item_id":"4","quantity":"1","price":"70"},
+{"id":"3","order_id":"2","food_item_id":"7","quantity":"1","price":"60"},
+{"id":"4","order_id":"3","food_item_id":"1","quantity":"1","price":"80"},
+{"id":"5","order_id":"4","food_item_id":"2","quantity":"3","price":"60"},
+{"id":"6","order_id":"5","food_item_id":"2","quantity":"4","price":"60"},
+{"id":"7","order_id":"6","food_item_id":"2","quantity":"3","price":"60"},
+{"id":"8","order_id":"7","food_item_id":"2","quantity":"2","price":"60"},
+{"id":"9","order_id":"8","food_item_id":"5","quantity":"1","price":"50"},
+{"id":"10","order_id":"9","food_item_id":"1","quantity":"1","price":"80"},
+{"id":"11","order_id":"10","food_item_id":"4","quantity":"2","price":"70"},
+{"id":"12","order_id":"11","food_item_id":"1","quantity":"1","price":"80"},
+{"id":"13","order_id":"12","food_item_id":"2","quantity":"2","price":"60"},
+{"id":"14","order_id":"13","food_item_id":"6","quantity":"2","price":"80"},
+{"id":"15","order_id":"14","food_item_id":"6","quantity":"2","price":"80"},
+{"id":"16","order_id":"15","food_item_id":"56","quantity":"1","price":"700"},
+{"id":"17","order_id":"16","food_item_id":"3","quantity":"15","price":"30"},
+{"id":"18","order_id":"17","food_item_id":"64","quantity":"2","price":"30"},
+{"id":"19","order_id":"17","food_item_id":"62","quantity":"2","price":"180"},
+{"id":"20","order_id":"18","food_item_id":"5","quantity":"1","price":"50"},
+{"id":"21","order_id":"19","food_item_id":"1","quantity":"1","price":"80"}
+]
+}
+,{"type":"table","name":"payments","database":"foodexpress","data":
+[
+{"id":"1","order_id":"1","amount":"577.5","method":"razorpay","transaction_id":"pay_SHvVkti81YsHwM","status":"completed","created_at":"2026-02-19 07:45:56"},
+{"id":"2","order_id":"2","amount":"176.5","method":"razorpay","transaction_id":"pay_SHx8VrLV2isYl4","status":"completed","created_at":"2026-02-19 09:21:18"},
+{"id":"3","order_id":"7","amount":"166","method":"razorpay","transaction_id":"pay_mock_0bmc62f1i","status":"completed","created_at":"2026-02-20 00:30:46"},
+{"id":"4","order_id":"9","amount":"124","method":"razorpay","transaction_id":"pay_mock_q7l10w4js","status":"completed","created_at":"2026-02-20 00:38:31"},
+{"id":"5","order_id":"10","amount":"187","method":"razorpay","transaction_id":"pay_mock_x4z8dz2ci","status":"completed","created_at":"2026-02-20 00:40:59"},
+{"id":"6","order_id":"11","amount":"124","method":"razorpay","transaction_id":"pay_SICz2jLAkIEBTv","status":"completed","created_at":"2026-02-20 00:51:26"},
+{"id":"7","order_id":"12","amount":"166","method":"razorpay","transaction_id":"pay_SIDElSZ35ZQk76","status":"completed","created_at":"2026-02-20 01:06:19"},
+{"id":"8","order_id":"13","amount":"208","method":"razorpay","transaction_id":"pay_SIEToKlH9PXNdZ","status":"completed","created_at":"2026-02-20 02:19:16"},
+{"id":"9","order_id":"14","amount":"208","method":"razorpay","transaction_id":"pay_SIGH0Q6Ajsz929","status":"completed","created_at":"2026-02-20 04:04:32"},
+{"id":"10","order_id":"15","amount":"693","method":"razorpay","transaction_id":"pay_SIGKeTwPhFlLxJ","status":"completed","created_at":"2026-02-20 04:07:59"},
+{"id":"11","order_id":"16","amount":"470.5","method":"razorpay","transaction_id":"pay_SIJ89SXXbHyQIc","status":"completed","created_at":"2026-02-20 06:52:13"},
+{"id":"12","order_id":"19","amount":"124","method":"razorpay","transaction_id":"pay_TLpYhP1bSf0heQ","status":"completed","created_at":"2026-08-04 20:50:41"}
+]
+}
+,{"type":"table","name":"restaurants","database":"foodexpress","data":
+[
+{"id":"1","name":"Manek Chowk Street Food","owner_id":"7","description":"Ahmedabad's iconic street food destination with the best chaats, dosas and more.","image":"samosa.jpeg","cuisine_type":"Street Food","rating":"4.5","address":"Manek Chowk, Old City, Ahmedabad","is_active":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"2","name":"Lucky Restaurant","owner_id":null,"description":"Famous for authentic Lucknowi Biryani and kebabs since 1955.","image":"Biryani.avif","cuisine_type":"Mughlai","rating":"4.4","address":"Lal Darwaja, Ahmedabad","is_active":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"3","name":"Gopi Dining Hall","owner_id":null,"description":"Traditional unlimited Gujarati Thali at its finest.","image":"thali.jpg","cuisine_type":"Gujarati","rating":"4.6","address":"Ashram Road, Ahmedabad","is_active":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"4","name":"Agashiye","owner_id":"8","description":"Award-winning rooftop fine dining Gujarati restaurant at The House of MG.","image":"thali1.jpg","cuisine_type":"Gujarati","rating":"4.8","address":"The House of MG, Lal Darwaja, Ahmedabad","is_active":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"5","name":"Vishalla","owner_id":null,"description":"Village-themed open-air restaurant serving traditional Gujarati food on leaf plates.","image":"thali2.jpg","cuisine_type":"Gujarati","rating":"4.7","address":"Sarkhej-Gandhinagar Highway, Ahmedabad","is_active":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"6","name":"Honest Restaurant","owner_id":"8","description":"Popular Ahmedabad chain known for Punjabi, South Indian and Chinese food.","image":"rc1.jpeg","cuisine_type":"Multi-Cuisine","rating":"4.3","address":"CG Road, Ahmedabad","is_active":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"7","name":"Das Khaman House","owner_id":"8","description":"Legendary shop for the softest Khaman, Khandvi and Gujarati farsan since 1946.","image":"khaman.jpg","cuisine_type":"Gujarati Snacks","rating":"4.6","address":"Manek Chowk, Ahmedabad","is_active":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"8","name":"Sankalp Restaurant","owner_id":null,"description":"Famous South Indian chain serving crispy dosas, idlis, and uttapams.","image":"dosa.avif","cuisine_type":"South Indian","rating":"4.4","address":"Drive-In Road, Ahmedabad","is_active":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"9","name":"Havmor Restaurant","owner_id":null,"description":"Ahmedabad's iconic restaurant and ice cream brand since 1944.","image":"cake.avif","cuisine_type":"Multi-Cuisine","rating":"4.5","address":"Ashram Road, Ahmedabad","is_active":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"10","name":"Rajwadu","owner_id":"7","description":"Royal Rajasthani-Gujarati dining experience with live folk music and dance.","image":"thali3.jpg","cuisine_type":"Gujarati","rating":"4.5","address":"Sarkhej-Gandhinagar Highway, Ahmedabad","is_active":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"11","name":"Gordhan Thal","owner_id":"8","description":"Premium unlimited Gujarati Thali with 40+ items and sweets.","image":"thali4.jpeg","cuisine_type":"Gujarati","rating":"4.6","address":"SG Highway, Ahmedabad","is_active":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"12","name":"Patang Revolving Restaurant","owner_id":"7","description":"Ahmedabad's only revolving rooftop restaurant with panoramic city views.","image":"roof.jpg","cuisine_type":"Multi-Cuisine","rating":"4.3","address":"Nehru Bridge, Ashram Road, Ahmedabad","is_active":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"13","name":"Barbeque Nation","owner_id":null,"description":"Live grill-on-your-table experience with unlimited starters, mains and desserts.","image":"sizzler.jpeg","cuisine_type":"BBQ & Grill","rating":"4.4","address":"Prahlad Nagar, Ahmedabad","is_active":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"14","name":"Tomatoes Restaurant","owner_id":null,"description":"Popular family restaurant serving Indian, Chinese and Continental food.","image":"pizza.avif","cuisine_type":"Multi-Cuisine","rating":"4.2","address":"Maninagar, Ahmedabad","is_active":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"15","name":"The Green House","owner_id":null,"description":"Trendy cafe with continental food, fresh juices, shakes and desserts.","image":"cafe2.jpeg","cuisine_type":"Cafe","rating":"4.3","address":"Bodakdev, Ahmedabad","is_active":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"16","name":"ZK's Restaurant","owner_id":null,"description":"Best Indo-Chinese food in Ahmedabad with generous portions.","image":"noodles.jpeg","cuisine_type":"Chinese","rating":"4.2","address":"Satellite Road, Ahmedabad","is_active":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"17","name":"Shree Thaker Bhojanalay","owner_id":null,"description":"Authentic Kathiyawadi-style unlimited thali with rustic flavors.","image":"thali5.jpeg","cuisine_type":"Gujarati","rating":"4.5","address":"Kalupur, Ahmedabad","is_active":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"18","name":"The Grand Bhagwati","owner_id":"7","description":"Premium dining with Indian, Chinese, Italian cuisines and lavish buffets.","image":"rc2.jpeg","cuisine_type":"Multi-Cuisine","rating":"4.4","address":"SG Highway, Ahmedabad","is_active":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"19","name":"Khamasa Cafe","owner_id":null,"description":"Heritage cafe in the old city with Mughlai snacks, chai, and bun maska.","image":"cafe4.jpeg","cuisine_type":"Cafe","rating":"4.3","address":"Khamasa, Old City, Ahmedabad","is_active":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"20","name":"Riddhi Siddhi Kathiyawadi","owner_id":null,"description":"Spicy and flavorful Kathiyawadi cuisine with authentic Saurashtra taste.","image":"thali6.jpeg","cuisine_type":"Kathiyawadi","rating":"4.4","address":"Naranpura, Ahmedabad","is_active":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"21","name":"Jalsa Restaurant","owner_id":null,"description":"North Indian and Punjabi food with rich gravies, tandoor items and breads.","image":"rc3.jpeg","cuisine_type":"Punjabi","rating":"4.3","address":"Prahladnagar, Ahmedabad","is_active":"1","created_at":"2026-02-18 18:15:20"},
+{"id":"22","name":"Cafe Good Luck","owner_id":"8","description":"Old Ahmedabad-style Irani cafe with fresh bakes, sandwiches and chai.","image":"cafe5.jpeg","cuisine_type":"Bakery & Cafe","rating":"4.2","address":"Ellis Bridge, Ahmedabad","is_active":"1","created_at":"2026-02-18 18:15:20"}
+]
+}
+,{"type":"table","name":"users","database":"foodexpress","data":
+[
+{"id":"1","email":"admin@foodexpress.com","password_hash":"pbkdf2:sha256:600000$Mvs5Pbj62t5dakTN$0b72ae9f9fdf86811873ca6556f0866dcec9950e94c39b189cbb72b43fb22be4","name":"Admin User","phone":"9999999999","is_admin":"1","is_delivery_agent":"0","role":"user","google_id":null,"created_at":"2026-02-18 18:15:20","restaurant_id":null},
+{"id":"2","email":"rahul.agent@foodexpress.com","password_hash":"pbkdf2:sha256:600000$h9fRbhOUNSjs8HxK$21a3d138e2dcad20ec1d1d847cb6f9ecbcc9516b6970bd92b48628e82bd478a8","name":"Rahul Kumar","phone":"9876543210","is_admin":"0","is_delivery_agent":"1","role":"user","google_id":null,"created_at":"2026-02-18 18:15:20","restaurant_id":null},
+{"id":"3","email":"priya.agent@foodexpress.com","password_hash":"pbkdf2:sha256:600000$SFOFXXwx8ww4SdqG$a163b05a29196675d722a11f1fb2ef545ee9860c81a7ccf53bc84add0157999d","name":"Priya Singh","phone":"9876543211","is_admin":"0","is_delivery_agent":"1","role":"user","google_id":null,"created_at":"2026-02-18 18:15:20","restaurant_id":null},
+{"id":"4","email":"amit@example.com","password_hash":"pbkdf2:sha256:600000$9yYq6KJ7827DI2sI$82b8acb40ee58879e694f59709d9da7d4d9e4a520a3390acb1c4a7ad3fce74ec","name":"Amit Sharma","phone":"9123456780","is_admin":"0","is_delivery_agent":"0","role":"user","google_id":null,"created_at":"2026-02-18 18:15:20","restaurant_id":null},
+{"id":"5","email":"sneha@example.com","password_hash":"pbkdf2:sha256:600000$yv0fwEAHuwI8nOSr$bd3b8df54838a04d67274b7c756220f400e9397e62d15a613db14ff5b42cf0e1","name":"Sneha Patel","phone":"9123456781","is_admin":"0","is_delivery_agent":"0","role":"user","google_id":null,"created_at":"2026-02-18 18:15:20","restaurant_id":null},
+{"id":"6","email":"vikram@example.com","password_hash":"pbkdf2:sha256:600000$jC16kGiWRnk1GSZ3$d2d43afd087b65c594bedf2c39bffdefffb2d3cab8ed73a200f29faac743a8c7","name":"Vikram Reddy","phone":"9123456782","is_admin":"0","is_delivery_agent":"0","role":"user","google_id":null,"created_at":"2026-02-18 18:15:20","restaurant_id":null},
+{"id":"7","email":"owner@restaurant.com","password_hash":"pbkdf2:sha256:600000$hadZF0dX9UFTgGl4$ff5023d61861744461f1f3b9e06b562ae5d1f9697001f97284344e0ac2d1144b","name":"Restaurant Owner","phone":"9876543210","is_admin":"0","is_delivery_agent":"0","role":"restaurant_owner","google_id":null,"created_at":"2026-02-19 20:46:44","restaurant_id":"12"},
+{"id":"8","email":"restaurant.owner@foodexpress.com","password_hash":"pbkdf2:sha256:600000$IDjFQrinV0mMRv9O$6bdfa2b78d0e7a32c97a160f0f593d3d636c85f799914a5851af0fed09d98144","name":"John Restaurant Owner","phone":"9876543211","is_admin":"0","is_delivery_agent":"0","role":"restaurant_owner","google_id":null,"created_at":"2026-02-19 20:47:20","restaurant_id":"11"}
+]
+}
+]
