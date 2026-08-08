@@ -449,7 +449,7 @@ export default function UserDashboard() {
                             <div>
                                 <p className="text-indigo-100 font-bold text-sm tracking-wide">AVAILABLE MAX BALANCE</p>
                                 <h1 className="text-5xl font-black tracking-tighter mt-1 drop-shadow-md">
-                                    <span className="text-indigo-200 opacity-60 mr-1">$</span>
+                                    <span className="text-indigo-200 opacity-60 mr-1">₹</span>
                                     {walletBalance.toFixed(2)}
                                 </h1>
                             </div>

@@ -220,7 +220,7 @@ export default function RestaurantDashboard() {
         const discountSection = discount > 0 ? (
             '<div class="total-row">' +
             '<span style="color:#10b981;">Discount Applied</span>' +
-            '<span style="color:#10b981;">-$' + discount.toFixed(2) + '</span>' +
+            '<span style="color:#10b981;">-₹' + discount.toFixed(2) + '</span>' +
             '</div>'
         ) : '';
 

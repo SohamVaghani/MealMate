@@ -1002,7 +1002,7 @@ export default function AdminDashboard() {
                                                 <td className="p-4">
                                                     {editingFoodItemId === fi.id ? (
                                                         <div className="flex items-center gap-1.5 border border-indigo-200 bg-white rounded-lg px-2 w-24 focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-500/20 shadow-sm transition-all overflow-hidden">
-                                                            <span className="font-black text-slate-400 pl-1">$</span>
+                                                            <span className="font-black text-slate-400 pl-1">₹</span>
                                                             <input
                                                                 type="number"
                                                                 value={editingPrice}
@@ -1036,7 +1036,7 @@ export default function AdminDashboard() {
                                                         </>
                                                     ) : (
                                                         <>
-                                                            <button onClick={() => { setEditingFoodItemId(fi.id); setEditingPrice(fi.price.replace('$', '')); }} className="p-2 text-indigo-500 hover:bg-indigo-50 rounded-lg transition-colors border border-indigo-100" title="Edit Price">
+                                                            <button onClick={() => { setEditingFoodItemId(fi.id); setEditingPrice(fi.price.replace('₹', '')); }} className="p-2 text-indigo-500 hover:bg-indigo-50 rounded-lg transition-colors border border-indigo-100" title="Edit Price">
                                                                 <Edit2 size={14} />
                                                             </button>
                                                             <button onClick={() => handleManageFoodItem(fi.id, 'toggle')} className="p-2 text-amber-500 hover:bg-amber-50 rounded-lg transition-colors border border-amber-100" title="Toggle Availability">
