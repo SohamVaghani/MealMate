@@ -1,3 +1,4 @@
+import os
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import permissions
@@ -10,7 +11,7 @@ class AdminDashboardStatsView(APIView):
     def get(self, request):
         from pymongo import MongoClient
         from bson.objectid import ObjectId
-        client = MongoClient('mongodb://localhost:27017/')
+        client = MongoClient(os.environ.get('MONGO_URI', 'mongodb://localhost:27017/'))
         db = client['mealmate_db']
 
         # 1. KPIs
@@ -109,7 +110,7 @@ class AdminDashboardStatsView(APIView):
             
         # 6. Pending Partners (from MongoDB, role: RESTAURANT, is_active: False)
         from pymongo import MongoClient
-        client = MongoClient('mongodb://localhost:27017/')
+        client = MongoClient(os.environ.get('MONGO_URI', 'mongodb://localhost:27017/'))
         db = client['mealmate_db']
         pending_users_cursor = db.core_user.find({"role": "RESTAURANT", "is_active": False})
         pending_partners = []

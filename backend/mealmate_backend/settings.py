@@ -1,3 +1,4 @@
+import os
 """
 Django settings for mealmate_backend project.
 
@@ -25,7 +26,7 @@ SECRET_KEY = 'django-insecure-)%jdof47usie6a0*c!*+ba406(f2jsfy(4c&bs)k5u@8b&jej+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*'] # Allowed all for Render
 
 
 # Application definition
@@ -83,7 +84,7 @@ DATABASES = {
         'ENGINE': 'djongo',
         'NAME': 'mealmate_db',
         'CLIENT': {
-            'host': 'mongodb://localhost:27017' # Change this if you have an Atlas URI
+            'host': os.environ.get('MONGO_URI', 'mongodb://localhost:27017') # Change this if you have an Atlas URI
         }
     }
 }

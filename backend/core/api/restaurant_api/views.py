@@ -1,3 +1,4 @@
+import os
 from rest_framework import viewsets
 from rest_framework.permissions import AllowAny # Will change to IsAuthenticated later
 from core.models import MenuItem, Order
@@ -14,7 +15,7 @@ class MenuItemViewSet(viewsets.ModelViewSet):
     def create(self, request, *args, **kwargs):
         from pymongo import MongoClient
         import random
-        client = MongoClient('mongodb://localhost:27017/')
+        client = MongoClient(os.environ.get('MONGO_URI', 'mongodb://localhost:27017/'))
         db = client['mealmate_db']
         
         data = request.data
@@ -38,7 +39,7 @@ class MenuItemViewSet(viewsets.ModelViewSet):
 
     def destroy(self, request, *args, **kwargs):
         from pymongo import MongoClient
-        client = MongoClient('mongodb://localhost:27017/')
+        client = MongoClient(os.environ.get('MONGO_URI', 'mongodb://localhost:27017/'))
         db = client['mealmate_db']
         
         item_id = int(kwargs.get('pk'))
@@ -48,7 +49,7 @@ class MenuItemViewSet(viewsets.ModelViewSet):
     def update(self, request, *args, **kwargs):
         from pymongo import MongoClient
         from rest_framework.response import Response
-        client = MongoClient('mongodb://localhost:27017/')
+        client = MongoClient(os.environ.get('MONGO_URI', 'mongodb://localhost:27017/'))
         db = client['mealmate_db']
         
         item_id = int(kwargs.get('pk'))
@@ -83,7 +84,7 @@ class RestaurantOrderViewSet(viewsets.ModelViewSet):
     def list(self, request, *args, **kwargs):
         from pymongo import MongoClient
         from rest_framework.response import Response
-        client = MongoClient('mongodb://localhost:27017/')
+        client = MongoClient(os.environ.get('MONGO_URI', 'mongodb://localhost:27017/'))
         db = client['mealmate_db']
         
         # We fetch all orders for the MVP Restaurant viewer
@@ -123,7 +124,7 @@ class RestaurantOrderViewSet(viewsets.ModelViewSet):
         from pymongo import MongoClient
         from rest_framework.response import Response
         
-        client = MongoClient('mongodb://localhost:27017/')
+        client = MongoClient(os.environ.get('MONGO_URI', 'mongodb://localhost:27017/'))
         db = client['mealmate_db']
         
         pk = kwargs.get('pk')
@@ -145,7 +146,7 @@ class UpdateCoverView(APIView):
     def post(self, request, *args, **kwargs):
         from pymongo import MongoClient
         from rest_framework.response import Response
-        client = MongoClient('mongodb://localhost:27017/')
+        client = MongoClient(os.environ.get('MONGO_URI', 'mongodb://localhost:27017/'))
         db = client['mealmate_db']
         
         restaurant_id = request.data.get('restaurant_id')

@@ -1,3 +1,4 @@
+import os
 from rest_framework import viewsets
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
@@ -18,7 +19,7 @@ class CustomerRestaurantViewSet(viewsets.ViewSet):
 
     def list(self, request):
         from pymongo import MongoClient
-        client = MongoClient('mongodb://localhost:27017/')
+        client = MongoClient(os.environ.get('MONGO_URI', 'mongodb://localhost:27017/'))
         db = client['mealmate_db']
         
         restaurants = []
@@ -49,7 +50,7 @@ class CustomerOrderViewSet(viewsets.ModelViewSet):
     
     def list(self, request, *args, **kwargs):
         from pymongo import MongoClient
-        client = MongoClient('mongodb://localhost:27017/')
+        client = MongoClient(os.environ.get('MONGO_URI', 'mongodb://localhost:27017/'))
         db = client['mealmate_db']
         
         c_id = request.query_params.get('customer_id', 1)
@@ -98,7 +99,7 @@ class CustomerOrderViewSet(viewsets.ModelViewSet):
         import random
         from pymongo import MongoClient
         
-        client = MongoClient('mongodb://localhost:27017/')
+        client = MongoClient(os.environ.get('MONGO_URI', 'mongodb://localhost:27017/'))
         db = client['mealmate_db']
         
         data = request.data
@@ -167,7 +168,7 @@ class ValidateCouponView(APIView):
             
         try:
             from pymongo import MongoClient
-            client = MongoClient('mongodb://localhost:27017/')
+            client = MongoClient(os.environ.get('MONGO_URI', 'mongodb://localhost:27017/'))
             db = client['mealmate_db']
             
             coupon = db.core_coupon.find_one({"code": code})
@@ -208,7 +209,7 @@ class ValidateCouponView(APIView):
 
     def get(self, request):
         from pymongo import MongoClient
-        client = MongoClient('mongodb://localhost:27017/')
+        client = MongoClient(os.environ.get('MONGO_URI', 'mongodb://localhost:27017/'))
         db = client['mealmate_db']
         
         # Fetch all active coupons using PyMongo directly
@@ -235,7 +236,7 @@ class AIRecommendationView(APIView):
     permission_classes = [AllowAny]
 
     def get(self, request):
-        client = MongoClient('mongodb://localhost:27017/')
+        client = MongoClient(os.environ.get('MONGO_URI', 'mongodb://localhost:27017/'))
         db = client['mealmate_db']
         
         # User ID would come from request.user, defaulting to 1 for demo
@@ -299,7 +300,7 @@ class WalletView(APIView):
     permission_classes = [AllowAny]
 
     def get(self, request):
-        client = MongoClient('mongodb://localhost:27017/')
+        client = MongoClient(os.environ.get('MONGO_URI', 'mongodb://localhost:27017/'))
         db = client['mealmate_db']
         user_id = request.query_params.get('customer_id', 1)
         try:
@@ -317,7 +318,7 @@ class WalletView(APIView):
         return Response({"success": True, "balance": float(balance)})
 
     def post(self, request):
-        client = MongoClient('mongodb://localhost:27017/')
+        client = MongoClient(os.environ.get('MONGO_URI', 'mongodb://localhost:27017/'))
         db = client['mealmate_db']
         user_id = request.data.get('customer_id', 1)
         try:

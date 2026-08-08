@@ -1,3 +1,4 @@
+import os
 from rest_framework import viewsets, status
 from rest_framework.decorators import action
 from rest_framework.response import Response
@@ -17,7 +18,7 @@ class DeliveryOrderViewSet(viewsets.ReadOnlyModelViewSet):
         
     def list(self, request, *args, **kwargs):
         from pymongo import MongoClient
-        client = MongoClient('mongodb://localhost:27017/')
+        client = MongoClient(os.environ.get('MONGO_URI', 'mongodb://localhost:27017/'))
         db = client['mealmate_db']
         
         # Only show orders that are PREPARING or READY (waiting for delivery pickup)
@@ -70,7 +71,7 @@ class DeliveryOrderViewSet(viewsets.ReadOnlyModelViewSet):
         new_status = request.data.get('status', '').upper()
         
         from pymongo import MongoClient
-        client = MongoClient('mongodb://localhost:27017/')
+        client = MongoClient(os.environ.get('MONGO_URI', 'mongodb://localhost:27017/'))
         db = client['mealmate_db']
         
         update_data = {"status": new_status}
