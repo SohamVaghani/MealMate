@@ -50,6 +50,7 @@ class CustomerOrderViewSet(viewsets.ModelViewSet):
     
     def list(self, request, *args, **kwargs):
         from pymongo import MongoClient
+        from rest_framework.response import Response
         client = MongoClient(os.environ.get('MONGO_URI', 'mongodb://localhost:27017/'))
         db = client['mealmate_db']
         
