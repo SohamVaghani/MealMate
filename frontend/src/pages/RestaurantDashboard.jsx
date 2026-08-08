@@ -173,7 +173,7 @@ export default function RestaurantDashboard() {
 
     const updateOrderStatus = async (id, status) => {
         try {
-            await axios.patch(`YOUR_BACKEND_URL/api/restaurant/orders/${id}/`, { status });
+            await axios.patch(`${import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000'}/api/restaurant/orders/${id}/`, { status });
             fetchOrders(restaurantId); // Refresh to get the latest status
         } catch (e) {
             alert("Error updating order: " + e.message);

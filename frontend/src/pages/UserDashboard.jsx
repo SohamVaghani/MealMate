@@ -197,10 +197,10 @@ export default function UserDashboard() {
             const [menuRes, restRes, ordersRes, walletRes, aiRes, couponRes] = await Promise.all([
                 axios.get((import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000') + '/api/restaurant/menu/'),
                 axios.get((import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000') + '/api/customer/restaurants/'),
-                axios.get(`YOUR_BACKEND_URL/api/customer/orders/?customer_id=${cid}`).catch(e => ({ data: [] })),
-                axios.get(`YOUR_BACKEND_URL/api/customer/wallet/?customer_id=${cid}`).catch(e => ({ data: { balance: 0 } })),
+                axios.get(`${import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000'}/api/customer/orders/?customer_id=${cid}`).catch(e => ({ data: [] })),
+                axios.get(`${import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000'}/api/customer/wallet/?customer_id=${cid}`).catch(e => ({ data: { balance: 0 } })),
                 axios.get((import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000') + '/api/customer/recommendations/').catch(e => ({ data: { data: [] } })),
-                axios.get(`YOUR_BACKEND_URL/api/customer/validate_coupon/?customer_id=${cid}`).catch(e => ({ data: { coupons: [] } }))
+                axios.get(`${import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000'}/api/customer/validate_coupon/?customer_id=${cid}`).catch(e => ({ data: { coupons: [] } }))
             ]);
 
             if (menuRes.data.length === 0 && restRes.data.length === 0) {
