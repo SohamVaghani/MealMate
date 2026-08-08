@@ -12,6 +12,27 @@ class MenuItemViewSet(viewsets.ModelViewSet):
     serializer_class = MenuItemSerializer
     permission_classes = [AllowAny]
 
+    def list(self, request, *args, **kwargs):
+        from pymongo import MongoClient
+        from rest_framework.response import Response
+        client = MongoClient(os.environ.get('MONGO_URI', 'mongodb://localhost:27017/'))
+        db = client['mealmate_db']
+        
+        items = []
+        for item in db.core_menuitem.find():
+            item.pop('_id', None)
+            items.append({
+                "id": int(item.get("id", 0)) if isinstance(item.get("id"), (int, float)) else str(item.get("id", "")),
+                "restaurant": int(item.get("restaurant_id", 0)) if isinstance(item.get("restaurant_id"), (int, float)) else str(item.get("restaurant_id", "")),
+                "name": item.get("name", ""),
+                "description": item.get("description", ""),
+                "price": item.get("price", 0),
+                "image_url": item.get("image_url", ""),
+                "category": item.get("category", ""),
+                "is_available": item.get("is_available", True)
+            })
+        return Response(items)
+
     def create(self, request, *args, **kwargs):
         from pymongo import MongoClient
         import random
